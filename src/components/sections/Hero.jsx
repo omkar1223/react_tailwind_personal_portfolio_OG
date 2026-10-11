@@ -79,7 +79,7 @@ const Hero = () => {
             <div className="animate-fade-in animate-delay-100">
               <span className="inline-flex items-center gap-2 px-2 py4 text-primary rounded-full glass">
                 <span className="w-2 h-2 bg-primary rounded-full text-sm text-primary animate-pulse" />
-                Software Engineer -- React Developer
+                Software Engineer - React Developer
               </span>
             </div>
 
@@ -98,17 +98,17 @@ const Hero = () => {
 
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animate-delay-500">
                 Hi, I am Omkar Gample - a software engineer specializing in
-                React, Next.js amd Typescript. I build scalable, performant web
+                React, Redux amd Typescript. I build scalable, performant web
                 applications that users love
               </p>
 
               {/*CTA button */}
 
               <div className="flex gap-10 animate-fade-in animate-delay-600">
-                <Button>
+                <Button href={"#Contact"} className={"relative flex items-center justify-center gap-2"}>
                   Contact me <ArrowRight className="w-5 h-5" />
                 </Button>
-                <AnimatedButton>
+                <AnimatedButton href={'/OmkarGampleCVLatest.pdf'} download={"OmkarGampleCVLatest.pdf"}>
                   <Download /> Download CV
                 </AnimatedButton>
               </div>
@@ -117,8 +117,8 @@ const Hero = () => {
               <div className="flex gap-4 items-center">
                 <span className="text-muted-foreground">Follow: </span>
                 {[
-                  { icon: FaGithub, href: "#" },
-                  { icon: FaLinkedin, href: "#" },
+                  { icon: FaGithub, href: "https://github.com/omkar1223" },
+                  { icon: FaLinkedin, href: "https://www.linkedin.com/in/omkar-gample-77b133222/" },
                   { icon: FaTwitter, href: "#" },
                 ].map((social, indx) => (
                   <a

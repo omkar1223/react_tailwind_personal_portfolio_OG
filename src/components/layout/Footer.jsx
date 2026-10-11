@@ -8,10 +8,10 @@ const socialLinks = [
 ];
 
 const footerLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+  { href: "#About", label: "About" },
+  { href: "#Projects", label: "Projects" },
+  { href: "#Experience", label: "Experience" },
+  { href: "#Contact", label: "Contact" },
 ];
 
 export const Footer = () => {
@@ -33,9 +33,9 @@ export const Footer = () => {
 
           {/* Links */}
           <nav className="flex flex-wrap justify-center gap-6">
-            {footerLinks.map((link) => (
+            {footerLinks.map((link,indx) => (
               <a
-                key={link.href}
+                key={indx}
                 href={link.href}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >

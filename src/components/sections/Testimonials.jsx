@@ -3,38 +3,39 @@ import { useState } from "react";
 
 const Testimonials = () => {
   const [testimonialId, setTestimonialId] = useState(0);
+
   const testimonials = [
     {
       quote:
-        "Pedro is one of the most talented engineers I've worked with. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
-      author: "Sarah Chen",
-      role: "CTO, Tech Innovators Inc.",
+        "Omkar is a dedicated frontend developer with strong React and TypeScript skills. He consistently delivers reusable UI components and handles complex requirements with a practical, solution-oriented approach.",
+      author: "Rahul Sharma",
+      role: "Technical Lead, Infosys",
       avatar:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
     },
     {
       quote:
-        "Working with Pedro was a game-changer for our project. He delivered ahead of schedule with code quality that set a new standard for our team.",
-      author: "Michael Rodriguez",
-      role: "Product Manager, Digital Solutions",
+        "Working with Omkar has been a great experience. His ability to troubleshoot production issues, integrate REST APIs, and maintain code quality makes him a reliable member of the development team.",
+      author: "Priya Deshmukh",
+      role: "Senior Software Engineer, Infosys",
       avatar:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop",
     },
     {
       quote:
-        "Pedro's expertise in React and TypeScript helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
-      author: "Emily Watson",
-      role: "Engineering Lead, StartUp Labs",
+        "Omkar demonstrates a strong understanding of frontend development, Redux state management, and responsive UI design. He collaborates effectively with cross-functional teams and contributes positively to project delivery.",
+      author: "Amit Kulkarni",
+      role: "Project Manager, Infosys",
       avatar:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
+        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop",
     },
     {
       quote:
-        "Not only is Pedro technically brilliant, but he's also a fantastic communicator and team player. He elevated everyone around him.",
-      author: "David Kim",
-      role: "CEO, Innovation Hub",
+        "Omkar showed enthusiasm for learning and applying technical concepts during his early career. His willingness to explore new technologies and work on practical projects reflects a strong foundation for continuous growth.",
+      author: "Neha Patil",
+      role: "Mentor, Verzeo",
       avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+        "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop",
     },
   ];
 
@@ -77,7 +78,7 @@ const Testimonials = () => {
                 alt=""
               />
               <div className="flex items-center gap-4">
-                <div className="font-semibold">{testimonials[0].author}</div>
+                <div className="font-semibold">{testimonials[testimonialId].author}</div>
                 <div className="text-sm text-muted-foreground">
                   {testimonials[testimonialId].role}
                 </div>
@@ -89,7 +90,8 @@ const Testimonials = () => {
 
           <div className="max-w-4xl flex justify-center mt-5">
             <div className="flex gap-10 rounded-2xl px-2 ">
-              <button className="glass px-2 rounded-3xl"
+              <button
+                className="glass px-2 rounded-3xl"
                 onClick={() => {
                   if (testimonialId > 0) {
                     setTestimonialId((prev) => prev - 1);
@@ -102,14 +104,17 @@ const Testimonials = () => {
 
               <div className="flex items-center gap-2">
                 {testimonials.map((_, indx) => (
-                  <button key={indx} onClick={()=>setTestimonialId(indx)}
+                  <button
+                    key={indx}
+                    onClick={() => setTestimonialId(indx)}
                     className={`rounded-2xl w-2 h-2 px-2 transition-all duration-500
                     ${indx === testimonialId ? "w-10 bg-primary" : "bg-muted-foreground"}`}
                   />
                 ))}
               </div>
 
-              <button className="glass px-2 rounded-3xl"
+              <button
+                className="glass px-2 rounded-3xl"
                 onClick={() => {
                   if (testimonialId < testimonials.length - 1) {
                     setTestimonialId((prev) => prev + 1);

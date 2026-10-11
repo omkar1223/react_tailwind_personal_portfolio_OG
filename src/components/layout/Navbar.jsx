@@ -33,7 +33,7 @@ const Navbar = () => {
           className="text-xl font-bold tracking-tight hover:text-primary"
           href="/"
         >
-          PM <span className="text-primary">.</span>
+          PM<span className="text-primary">.</span>
         </a>
 
         {/*Desktop Nav*/}
@@ -52,8 +52,8 @@ const Navbar = () => {
         </div>
 
         {/*CTA button */}
-        <div href="#Contact" className="md:block hidden">
-          <Button size={"sm"} children={"Contact me"} />
+        <div className="md:block hidden ">
+          <Button href={"#Contact"} size={"sm"} children={"Contact me"}/>
         </div>
 
         {/*CTA mobile*/}
@@ -78,7 +78,7 @@ const Navbar = () => {
               {obj.label}
             </a>
           ))}
-          <Button href='#Contact' onClick={() => setExpand(false)} size={"sm"}>
+          <Button href={'#Contact'} onClick={() => setExpand(false)} size={"sm"}>
             Contact me
           </Button>
         </div>
